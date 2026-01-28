@@ -7,13 +7,15 @@
     <h1>Student Login</h1>
     <input type="password" id="passwordInput" placeholder="Enter password">
     <button onclick="checkPassword()">Submit</button> 
+    <p id="errorMsg" style="color:red; display:none;">Wrong password!</p>
     <script>
         function checkPassword() {
             let userPassword = document.getElementById("passwordInput").value;
             
             if (userPassword === "techno") {
                 window.location.href = "technos.html";
-            } else {
+            } 
+            else {
                 // SHOW error message
                 document.getElementById("errorMsg").style.display = "block";
             }
